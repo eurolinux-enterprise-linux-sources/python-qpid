@@ -3,7 +3,7 @@
 
 Name:           python-qpid
 Version:        0.14
-Release:        7%{?dist}
+Release:        8%{?dist}
 Summary:        Python client library for AMQP
 
 Group:          Development/Python
@@ -18,6 +18,7 @@ Patch0:         mrg.patch
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch:      noarch
 
+Requires:       python-saslwrapper >= 0.10
 BuildRequires:  python-devel
 
 %description
@@ -49,9 +50,13 @@ rm -rf %{buildroot}
 %endif
 
 %changelog
-* Mon Apr 2 2012 Justin Ross <jross@redhat.com> - 0.14-7
-- Rebase to Qpid 0.14
+* Tue Apr 10 2012 Justin Ross <jross@redhat.com> - 0.14-8
+- Bump release number for correct upgrade behavior
+
+* Thu Mar 15 2012 Justin Ross <jross@redhat.com> - 0.14-6
+- Add a dependency on python-saslwrapper
 - Resolves: bz749600
+- Rebase to Qpid 0.14
 
 * Mon Aug  8 2011 Justin Ross <jross@redhat.com> - 0.12-1
 - Rebase to Qpid 0.12.
