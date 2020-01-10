@@ -3,7 +3,7 @@
 
 Name:           python-qpid
 Version:        0.14
-Release:        8%{?dist}
+Release:        11%{?dist}
 Summary:        Python client library for AMQP
 
 Group:          Development/Python
@@ -50,6 +50,10 @@ rm -rf %{buildroot}
 %endif
 
 %changelog
+* Thu Aug 16 2012 Justin Ross <jross@redhat.com> - 0.14-11
+- BZs: 825078
+- Resolves: rhbz#840053
+
 * Tue Apr 10 2012 Justin Ross <jross@redhat.com> - 0.14-8
 - Bump release number for correct upgrade behavior
 
